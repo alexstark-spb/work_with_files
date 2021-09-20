@@ -1,9 +1,12 @@
 package com.alexstark.utils;
 
+import com.codeborne.pdftest.PDF;
 import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+
+import static org.apache.commons.io.FileUtils.getFile;
 
 
 public class Files {
@@ -13,8 +16,10 @@ public class Files {
     }
 
     public static String readTextFromPath(String path) throws IOException {
-        File file = new File(path);
-        return readTextFromFile(file);
+        return readTextFromFile(getFile(path));
+    }
 
+    public static PDF getPdf(String path) throws IOException {
+        return new PDF(getFile(path));
     }
 }
