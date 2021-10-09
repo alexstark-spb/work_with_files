@@ -16,6 +16,7 @@ public class XlsFileTests {
         String expectedData = "Александрова Ксения Евгеньевна";
 
         XLS xls = getXls(xlsFilePath);
+        System.out.println("");
         String actualData = xls.excel.getSheetAt(1).getRow(2).getCell(1).toString();
         assertThat(actualData, containsString(expectedData));
     }
