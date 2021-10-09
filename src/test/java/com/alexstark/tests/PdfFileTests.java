@@ -12,7 +12,7 @@ public class PdfFileTests {
 
     @Test
     void pdfTest() throws IOException {
-        String pdfFilePath = "./src/test/resources/files/pdf-test.pdf";
+        String pdfFilePath = "./src/test/resources/pdf-test.pdf";
         String expectedData = "Как скачать файл с помощью Selenide";
 
         PDF pdf = getPdf(pdfFilePath);

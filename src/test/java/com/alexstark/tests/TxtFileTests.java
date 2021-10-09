@@ -12,7 +12,7 @@ public class TxtFileTests {
 
     @Test
     void txtTest() throws IOException {
-        String txtFilePath = "./src/test/resources/files/txt-test.txt";
+        String txtFilePath = "./src/test/resources/txt-test.txt";
         String expectedData = "hello txt";
 
         String actualData = readTextFromPath(txtFilePath);
@@ -21,7 +21,7 @@ public class TxtFileTests {
 
     @Test
     void csvTest() throws IOException {
-        String csvFilePath = "./src/test/resources/files/csv-test.csv";
+        String csvFilePath = "./src/test/resources/csv-test.csv";
         String expectedData = "hello csv";
 
         String actualData = readTextFromPath(csvFilePath);
