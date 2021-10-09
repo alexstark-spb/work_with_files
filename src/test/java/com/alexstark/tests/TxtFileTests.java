@@ -18,14 +18,5 @@ public class TxtFileTests {
         String actualData = readTextFromPath(txtFilePath);
         assertThat(actualData, containsString(expectedData));
     }
-
-    @Test
-    void csvTest() throws IOException {
-        String csvFilePath = "./src/test/resources/csv-test.csv";
-        String expectedData = "hello csv";
-
-        String actualData = readTextFromPath(csvFilePath);
-        assertThat(actualData, containsString(expectedData));
-    }
 }
 
